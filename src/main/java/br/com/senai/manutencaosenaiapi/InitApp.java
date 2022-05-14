@@ -29,12 +29,13 @@ import br.com.senai.manutencaosenaiapi.service.OrdemDeServicoService;
 import br.com.senai.manutencaosenaiapi.service.PecaService;
 import br.com.senai.manutencaosenaiapi.service.TecnicoService;
 import br.com.senai.manutencaosenaiapi.view.TelaCadastroDeTipo;
+import br.com.senai.manutencaosenaiapi.view.TelaConsultaDePeca;
 
 @SpringBootApplication
 public class InitApp {
 
 	@Autowired
-	private TelaCadastroDeTipo telaCadastroDeTipo;
+	private TelaConsultaDePeca telaConsultaDePeca;
 	
 	public static void main(String[] args) {
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(InitApp.class);
@@ -62,7 +63,7 @@ public class InitApp {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							telaCadastroDeTipo.setVisible(true);
+							telaConsultaDePeca.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
